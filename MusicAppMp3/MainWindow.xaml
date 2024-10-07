@@ -10,7 +10,6 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         
         <!--Main Control-->
@@ -20,11 +19,46 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <ToggleButton>BXH Việt Nam</ToggleButton>
+            </Grid>
+            <Grid Grid.Column="1">
+                <ToggleButton>BXH Âu Mỹ</ToggleButton>
+            </Grid>
+            <Grid Grid.Column="2">
+                <ToggleButton>BXH Hàn Quốc</ToggleButton>
+            </Grid>
+
         </Grid>
         
         <!--List top 10 songs-->
         <Grid Grid.Row="1">
-            
+            <Grid Height="50">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Grid>
+                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">01</TextBlock>
+                </Grid>
+
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Grid>
+                        <TextBlock>Tên bài hát</TextBlock>
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+                        <TextBlock>Tên ca sỹ</TextBlock>
+                    </Grid>
+                </Grid>
+            </Grid> 
         </Grid>
     </Grid>
 </Window>
