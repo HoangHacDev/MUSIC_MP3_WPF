@@ -5,7 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MusicAppMp3"
         mc:Ignorable="d"
+        FontFamily="Arial"
         Title="MainWindow" Height="750" Width="525">
+    <Window.Resources>
+        <ResourceDictionary Source="MainStyles.xaml"></ResourceDictionary>
+    </Window.Resources>
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
@@ -34,31 +39,39 @@
         
         <!--List top 10 songs-->
         <Grid Grid.Row="1">
-            <Grid Height="50">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="50"></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
-                </Grid.ColumnDefinitions>
+            <ListBox x:Name="lsbTopSong" HorizontalContentAlignment="Stretch">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Border VerticalAlignment="Stretch" Height="50" BorderThickness="2" BorderBrush="Black">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50"></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
 
-                <Grid>
-                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">01</TextBlock>
-                </Grid>
+                                <Grid>
+                                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">01</TextBlock>
+                                </Grid>
 
-                <Grid Grid.Column="1">
-                    <Grid.RowDefinitions>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                    </Grid.RowDefinitions>
+                                <Grid Grid.Column="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
 
-                    <Grid>
-                        <TextBlock>Tên bài hát</TextBlock>
-                    </Grid>
+                                    <Grid>
+                                        <TextBlock HorizontalAlignment="Left">Tên bài hát</TextBlock>
+                                    </Grid>
 
-                    <Grid Grid.Row="1">
-                        <TextBlock>Tên ca sỹ</TextBlock>
-                    </Grid>
-                </Grid>
-            </Grid> 
+                                    <Grid Grid.Row="1">
+                                        <TextBlock HorizontalAlignment="Left">Tên ca sỹ</TextBlock>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
         </Grid>
     </Grid>
 </Window>

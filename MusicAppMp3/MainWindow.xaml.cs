@@ -23,6 +23,8 @@ namespace MusicAppMp3
         public MainWindow()
         {
             InitializeComponent();
+
+            lsbTopSong.ItemsSource = new List<string>() {"", "", "", "" };
         }
     }
 }
